@@ -18,8 +18,8 @@ It uses Socket.io to display the events in a UI in real time. The backing server
 To serve from localhost:8000 via nodemon.
 
 ```
-git clone https://github.com/philals/react-redux-typescript-clientside-boilerplate.git
-cd react-redux-typescript-clientside-boilerplate
+git clone https://github.com/philals/XeroWebhooksReceiver-Node
+cd XeroWebhooksReceiver-Node
 npm install
 npm run build
 npm run serve-watch

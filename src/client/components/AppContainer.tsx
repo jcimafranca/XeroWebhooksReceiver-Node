@@ -24,6 +24,7 @@ class AppContainer extends React.Component<IProps, any> {
 			<p>Visit <a href="/org">/org</a> to see if your Partner app is connected.
 			Warning: Your tokens are stored in memory so will be lost when your server restarts.
 			You should still get hooks for that Org though.</p>
+			<p><a href="https://go.xero.com/Contacts/Search/?contactType=CONTYPE%2FALL">Visit here to edit a contact</a></p>
 			<Card>
 				<CardHeader title="Send your Webhooks to your public address /webhooks"
 					subtitle="You can set this in http://developer.xero.com/myapps/webhooks"/>
