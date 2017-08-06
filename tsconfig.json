@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"module": "commonjs",
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"target": "ES5",
+		"lib": [
+			"es2015",
+			"es2017",
+			"dom"
+		]
+	},
+	"exclude": [
+		"node_modules",
+		"./src/client"
+	],
+	"include": [
+		"./src/server/**/*"
+	]
+}
