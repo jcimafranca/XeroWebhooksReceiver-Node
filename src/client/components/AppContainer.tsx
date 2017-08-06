@@ -26,7 +26,7 @@ class AppContainer extends React.Component<IProps, any> {
 			You should still get hooks for that Org though.</p>
 			<p><a href="https://go.xero.com/Contacts/Search/?contactType=CONTYPE%2FALL">Visit here to edit a contact</a></p>
 			<Card>
-				<CardHeader title="Send your Webhooks to your public address /webhooks"
+				<CardHeader title="Send your Webhooks to your public address {your-ngrok-address}/webhooks"
 					subtitle="You can set this in http://developer.xero.com/myapps/webhooks"/>
 			</Card>
 			<AddHookButton />
