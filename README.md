@@ -1,5 +1,7 @@
 # Xero Webhooks Receiver using Typesctipt/Node
-This sample application demonstrates how to receive webhooks from Xero. It uses Socket.io to display the events in a UI in real time.
+This sample application demonstrates how to receive webhooks from Xero.
+
+It uses Socket.io to display the events in a UI in real time. The backing server is Hapi. The front end is React with Redux. Written in Typescript.
 
 1. Accept a POST request from Xero
 2. Verify the payload signature
