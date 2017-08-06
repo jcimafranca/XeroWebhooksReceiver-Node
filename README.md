@@ -11,7 +11,7 @@ It uses Socket.io to display the events in a UI in real time. The backing server
 ## Prerequisites
 - A Partner app and one Xero Organisation, to generate webhook events (https://app.xero.com/Application/)
 - A subscription for your app subscribed to contact events (https://developer.xero.com/myapps)
-- ngrok, to tunnel network public traffic to localhost (https://ngrok.com/)
+- ngrok, to tunnel network public traffic to localhost (https://ngrok.com/) There is no need to sign up, you can just download and start using
 - Edit the `config.example.ts` to have your correct details
 
 ## Serve website locally
