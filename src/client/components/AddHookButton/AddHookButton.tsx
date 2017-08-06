@@ -36,5 +36,5 @@ function postTestHook() {
 }
 
 export default () => {
-	return <div className="add-hook-button"><FlatButton label="Post hook to yourself..." onClick={postTestHook} /></div>;
+	return <div className="add-hook-button"><FlatButton label="Post local test hook to yourself" onClick={postTestHook} /></div>;
 };
