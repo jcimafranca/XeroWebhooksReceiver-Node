@@ -57,7 +57,7 @@ server.register([Inert])
 let oauthToken = '';
 let oauthSecret = '';
 
-function validateEventIsFromXero(request: Hapi.Request) {
+function eventIsFromXero(request: Hapi.Request) {
 	let computedSignature = crypto.createHmac('sha256', config.webhooksKey)
 		.update(request.payload.toString()).digest('base64');
 
@@ -65,10 +65,12 @@ function validateEventIsFromXero(request: Hapi.Request) {
 
 	if (xeroSignature === computedSignature) {
 		console.log('Signature passed! This is from Xero!');
+		return true;
 	} else {
 		// If this happens someone who is not Xero is sending you a webhook
 		console.log('Signature failed. Webhook might not be from Xero or you have misconfigured something...');
 		console.log(`Got {${computedSignature}} when we were expecting {${xeroSignature}}`);
+		return false;
 	}
 }
 
@@ -95,9 +97,12 @@ function registerRoutes(server: Hapi.Server) {
 			}
 		},
 		handler: async function(request, reply) {
-			reply().code(200); // Reply with 200 ASAP and continue to process event
 
-			validateEventIsFromXero(request);
+			if (eventIsFromXero(request)) {
+				reply().code(200); // Reply with 200 ASAP and continue to process event
+			} else {
+				reply().code(401); // Reply with 401 as per: https://developer.xero.com/documentation/getting-started/webhooks
+			}
 
 			try {
 				io.emit('webhook-recieved', request.payload);
