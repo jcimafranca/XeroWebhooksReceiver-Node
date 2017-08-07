@@ -1,4 +1,4 @@
-# Xero Webhooks Receiver using Typesctipt/Node
+# Xero Webhooks Receiver using Typescript/Node
 This sample application demonstrates how to receive webhooks from Xero.
 
 It uses Socket.io to display the events in a UI in real time. The backing server is Hapi. The front end is React with Redux. Written in Typescript.
@@ -37,9 +37,9 @@ Output site will be in ./dist
 4. Create or modify any contact in a Xero Organisation connected to your app and wait for the event to arrive at your XeroWebhooksReceiver server.
 
 ## Step 4
-Sign up for an Event Subscription at `https://developer.xero.com/myapps`. Make the URL `{your-enrok-address}/webhooks`. Copy your webhooks key into the config.ts
+Sign up for an Event Subscription at `https://developer.xero.com/myapps`. Make the URL `{your-ngrok-address}/webhooks`. Copy your webhooks key into the config.ts
 
-## Step 4 - Connect an Org and trigger webhooks
+## Step 5 - Connect an Org and trigger webhooks
 1. Go to `localhost:8000`
 2. Connect an Org with the Connect button. Note: tokens are held in memory and will be lost when the server restarts. Xero will still send events.
 3. Trigger an event by editing a contact: `https://go.xero.com/Contacts/Search/?contactType=CONTYPE%2FALL`
