@@ -31,6 +31,9 @@ npm run serve-watch
 Output site will be in ./dist
 
 ## Step 3 - Make your local server accessible from Xero
+
+Locally, you can use Ngrok to expose a local port over the internet. Ngrok will give you a Ngrok address which will be tunnel to your local port.
+
 1. Download ngrok from https://ngrok.com/ and unzip to a directory of your choice.
 2. Open a terminal in the directory and execute `./ngrok http --bind-tls=true 8000`. Ngrok will provide you with a https URL (e.g. https://daaf38b6.ngrok.io).
 3. Set your app's webhook delivery URL to {ngrok_address}**/webhooks** (e.g. https://daaf38b6.ngrok.io/webhooks) in the [developer portal](https://developer.xero.com/myapps/webhooks).
