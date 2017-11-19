@@ -1,6 +1,5 @@
 dist
 /src/server/privatekey.pem
-/src/server/config.ts
 
 dist
 
