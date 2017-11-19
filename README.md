@@ -39,8 +39,10 @@ Locally, you can use Ngrok to expose a local port over the internet. Ngrok will 
 3. Set your app's webhook delivery URL to {ngrok_address}**/webhooks** (e.g. https://daaf38b6.ngrok.io/webhooks) in the [developer portal](https://developer.xero.com/myapps/webhooks).
 4. Create or modify any contact in a Xero Organisation connected to your app and wait for the event to arrive at your XeroWebhooksReceiver server.
 
-## Step 4
-Sign up for an Event Subscription at `https://developer.xero.com/myapps`. Make the URL `{your-ngrok-address}/webhooks`. Copy your webhooks key into the config.ts
+## Step 4 - https://developer.xero.com
+1. Add localhost to the callback domains for your Partner app
+2. Sign up for a Webhook at `https://developer.xero.com/myapps`. Make the POST URL `{your-ngrok-address}/webhooks`. Copy your webhooks key into the config.
+3. During this time Xero will send a few test events. Some of these will pass validation and some will not. This is a test to make sure you are validating the payloads correctly.
 
 ## Step 5 - Connect an Org and trigger webhooks
 1. Go to `localhost:8000`
