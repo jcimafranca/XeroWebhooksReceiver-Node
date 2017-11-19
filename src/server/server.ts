@@ -6,18 +6,21 @@ import * as fs from 'fs';
 import * as crypto from 'crypto';
 
 import * as xero from 'xero-node';
-import { config } from './config';
+import { getConfig } from './config';
 let xeroClient: any = {};
+
+const config = getConfig();
 
 // Private key can either be a path or a String so check both variables and make sure the path has been parsed.
 if (config.privateKeyPath && !config.privateKey) {
 	config.privateKey = fs.readFileSync(config.privateKeyPath);
+
 }
 
 try {
 	xeroClient = new xero.PartnerApplication(config);
 } catch (error) {
-	console.error(error);
+	console.error('Error making client: ', error);
 }
 
 const server = new Hapi.Server();
