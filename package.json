@@ -8,7 +8,9 @@
     "build-client-watch": "webpack --watch --config=webpack.config.js",
     "build-server": "tsc",
     "build-server-watch": "tsc --watch",
-    "serve-watch": "nodemon ./dist/server.js"
+    "serve-watch": "nodemon ./dist/server.js",
+    "postinstall": "npm run build",
+    "start": "npm run serve-watch"
   },
   "engines": {
     "node": "6.10.3",
@@ -25,9 +27,7 @@
     "redux": "^3.6.0",
     "redux-socket.io": "^1.4.0",
     "socket.io": "^2.0.3",
-    "xero-node": "^2.2.2"
-  },
-  "devDependencies": {
+    "xero-node": "^2.2.2",
     "@types/material-ui": "^0.17.19",
     "@types/socket.io": "^1.4.29",
     "@types/hapi": "^16.1.6",
