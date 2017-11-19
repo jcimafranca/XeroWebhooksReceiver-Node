@@ -10,7 +10,7 @@ This project will:
 4. Process the event after responding to Xero
 
 ## Prerequisites
-- A Partner app and one Xero Organisation, to generate webhook events (https://app.xero.com/Application/)
+- A Partner/Private app and one Xero Organisation, to generate webhook events (https://developer.xero.com/myapps)
 - A subscription for your app subscribed to contact events (https://developer.xero.com/myapps)
 - ngrok, to tunnel network public traffic to localhost (https://ngrok.com/) There is no need to sign up, you can just download and start using
 
@@ -44,7 +44,7 @@ Sign up for an Event Subscription at `https://developer.xero.com/myapps`. Make t
 2. Connect an Org with the Connect button. Note: tokens are held in memory and will be lost when the server restarts. Xero will still send events.
 3. Trigger an event by editing a contact: `https://go.xero.com/Contacts/Search/?contactType=CONTYPE%2FALL`
 
-PRs welcome with an Issue
+PRs welcome with an issue/discussion
 
 Credits:
 - Vanessa for the crypto code
