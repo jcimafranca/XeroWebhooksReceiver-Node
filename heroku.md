@@ -1,3 +1,7 @@
+1. Add your Heroku URL to your app's callback domain list
+2. Set your Heroku env vars (copy and paste the CLI steps below). Set the PRIVATE_KEY in the Heroku UI
+3. Update your Webhooks notification address at https://developer.xero.com/myapps
+
 ```
 heroku config:set USER_AGENT=WebhooksReceiverNode
 heroku config:set CONSUMER_KEY=KEYHERE
