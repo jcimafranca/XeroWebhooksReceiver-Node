@@ -27,7 +27,7 @@ const server = new Hapi.Server();
 
 let port = 8000;
 if (process.env.PORT) {
-	port = +process.env.PORT;
+	port = (process.env.PORT as any);
 }
 
 server.connection({
