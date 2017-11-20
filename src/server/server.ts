@@ -31,7 +31,6 @@ if (process.env.PORT) {
 }
 
 server.connection({
-	host: 'localhost',
 	port: port
 });
 
